@@ -1,6 +1,6 @@
 NAME = libft.a
 
-SRC = ft_putstr.c ft_putchar.c ft_putendl.c ft_putnbr.c
+SRC = ft_putstr.c ft_putchar.c ft_putendl.c ft_putnbr.c ft_strnew.c
 
 HEADER = includes/
 
