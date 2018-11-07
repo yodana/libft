@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:49:04 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/07 18:40:48 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/07 19:23:21 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/07 19:26:29 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putchar(char c)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	write(1, &c, 1);
+	ft_putstr_ld(s, fd);
+	ft_putchar_ld('\n', fd);
 }
