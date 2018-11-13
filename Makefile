@@ -2,8 +2,12 @@ NAME = libft.a
 
 SRC = ft_putstr.c ft_putchar.c ft_putendl.c ft_putnbr.c ft_strnew.c \
 	ft_putchar_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+<<<<<<< HEAD
 	ft_strlen.c ft_memset.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	ft_isprint.c ft_isascii.c
+=======
+	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c
+>>>>>>> 023f0a0735a62dc6e00fe0c0ad42da232320347d
 
 HEADER = includes/
 
