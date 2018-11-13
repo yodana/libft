@@ -16,5 +16,8 @@ int main()
 	ft_putstr("Test 1 du ft_strnew: ");
 	ft_putstr(ft_strnew(7));
 	ft_putchar('\n');
+	if(ft_isalpha(97))
+		ft_putchar("ALPHABET WORK\n")
+	ft_putstr("Test de is_alpha")
 	return 0;
 }
