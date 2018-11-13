@@ -15,6 +15,8 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char*   ft_strnew(size_t size);
 size_t  ft_strlen(const char *s);
-void    *memset(void *s, int c, size_t n);
+void    *ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
