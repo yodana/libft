@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:21:00 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/08 19:34:24 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/13 15:10:40 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ft_memset((void*)src++, (int)dest++, 1);
+		((char*)dest)[i] = ((const char*)src)[i]; 
 		i++;
 	}
 	return (dest);

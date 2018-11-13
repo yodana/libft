@@ -15,17 +15,14 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char*   ft_strnew(size_t size);
 size_t  ft_strlen(const char *s);
-<<<<<<< HEAD
-void    *memset(void *s, int c, size_t n);
 int     ft_isalpha(int c);
 int     ft_isdigit(int c);
 int     ft_isalphnum(int c);
 int     ft_isascii(int c);
 int     ft_isprint(int c);
-=======
 void    *ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
->>>>>>> 023f0a0735a62dc6e00fe0c0ad42da232320347d
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 #endif

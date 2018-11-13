@@ -1,6 +1,7 @@
 
 #include "includes/libft.h"
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -16,11 +17,6 @@ int main()
 	ft_putstr("Test 1 du ft_strnew: ");
 	ft_putstr(ft_strnew(7));
 	ft_putchar('\n');
-<<<<<<< HEAD
-	if(ft_isalpha(97))
-		ft_putchar("ALPHABET WORK\n")
-	ft_putstr("Test de is_alpha")
-=======
 	char num[5];
 	int i = 0;
 	ft_memset(num, 97, sizeof(num));
@@ -28,19 +24,24 @@ int main()
 	{
 		ft_putstr(" Test du ft_memset: ");
 		ft_putchar(num[i]);
+		ft_putchar('\n');
 		i++;
 	}
-	char dest[5] = "salut";
-	char src[6] = "bonjou";
-	ft_memcpy(dest,src,97);
+	char dest[7] = "salutii";
+	char src[6] = "bonou";
+	char dest2[7] = "salutii";
+	char src2[6] = "bonou";
 	i = 0;
-	while (i < 5)
+		memccpy(dest,src,'j',5);
+	ft_memccpy(dest2,src2,'j',5);
+	while (i < 6)
 	{
-		ft_putstr("Test du ft_memcpy: ");
+	ft_putstr("\nTest du memccpy: ");
 		ft_putchar(dest[i]);
+		ft_putstr("     Test du ft_memccpy:  ");
+		ft_putchar(dest2[i]);
 		i++;
 	}
 	ft_putchar('\n');
->>>>>>> 023f0a0735a62dc6e00fe0c0ad42da232320347d
 	return 0;
 }
