@@ -42,6 +42,7 @@ int main()
 		ft_putchar(dest2[i]);
 		i++;
 	}
+	
 	ft_putchar('\n');
 	return 0;
 }
