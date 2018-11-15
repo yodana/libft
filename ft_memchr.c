@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:49:04 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/07 18:40:48 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/13 17:30:41 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/15 15:45:16 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putchar(char c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	write(1, &c, 1);
+	size_t i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((unsigned char*)s)[i] == (unsigned char)c)
+			return ((void*)s + i);
+		i++;
+	}
+	return (NULL);
 }

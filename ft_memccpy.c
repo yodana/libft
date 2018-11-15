@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:13:46 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/07 18:34:24 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/13 15:19:56 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/15 14:07:00 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putendl(char const *s)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	size_t i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((unsigned char*)src)[i] == ((unsigned char)c))
+		{
+			((char*)dest)[i] = ((const char*)src)[i];
+			return (dest + i + 1);
+		}
+		else
+			((char*)dest)[i] = ((const char*)src)[i];
+		i++;
+	}
+	return (NULL);
 }

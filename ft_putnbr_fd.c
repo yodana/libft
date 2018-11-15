@@ -6,11 +6,11 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:29:28 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/07 19:30:56 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/15 14:10:45 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

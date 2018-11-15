@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 16:46:09 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/13 17:26:01 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/15 14:45:17 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/15 16:42:11 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+#include "libft.h"
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	if (src >= dst)
-		return (ft_memcpy(dst, src, len));
-	while (len)
-	{
-		((char*)dst)[len - 1] = ((char*)src)[len - 1];
-		len--;
-	}
-	return (dst);
+	size_t i;
+	size_t j;
+
+	j = 0;
+	i = ft_strlen(s1);
+	while (j < n && s2[j])
+		s1[i++] = s2[j++];
+	s1[i] = '\0';
+	return (s1);
 }

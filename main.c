@@ -1,5 +1,5 @@
 
-#include "includes/libft.h"
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -27,9 +27,9 @@ int main()
 		ft_putchar('\n');
 		i++;
 	}
-	char dest[7] = "salutii";
-	char src[6] = "bonou";
-	char dest2[7] = "salutii";
+	char dest[7] = "al";
+	char src[6] = "av";
+/*	char dest2[7] = "salutii";
 	char src2[6] = "bonou";
 	i = 0;
 		memccpy(dest,src,'j',5);
@@ -41,8 +41,9 @@ int main()
 		ft_putstr("     Test du ft_memccpy:  ");
 		ft_putchar(dest2[i]);
 		i++;
-	}
-	
+	}*/
+	ft_putnbr(memcmp(dest,src,3));
 	ft_putchar('\n');
+	ft_putnbr(ft_memcmp(dest,src,3));
 	return 0;
 }

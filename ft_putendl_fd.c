@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 19:19:47 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/13 14:29:39 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/07 19:23:21 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/15 14:10:08 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	int i;
-
-	i = 0;
-	while (s[i])
-		ft_putchar_fd(s[i++], fd);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

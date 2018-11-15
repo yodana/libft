@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:59:33 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/07 18:33:33 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/15 13:45:58 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/15 15:52:17 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr(char const *s)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
 	i = 0;
-	while (s[i])
-		ft_putchar(s[i++]);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
