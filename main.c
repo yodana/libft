@@ -29,7 +29,7 @@ int main()
 	}
 	char dest[7] = "al";
 	char src[6] = "av";
-/*	char dest2[7] = "salutii";
+	char dest2[7] = "salutii";
 	char src2[6] = "bonou";
 	i = 0;
 		memccpy(dest,src,'j',5);
@@ -41,9 +41,17 @@ int main()
 		ft_putstr("     Test du ft_memccpy:  ");
 		ft_putchar(dest2[i]);
 		i++;
-	}*/
+	}
+	char dest3[7] = "bonjour";
+	char src3[4] = "joul";
 	ft_putnbr(memcmp(dest,src,3));
 	ft_putchar('\n');
 	ft_putnbr(ft_memcmp(dest,src,3));
+	ft_putchar('\n');
+	ft_putstr("Test du ft_strstr: ");
+	//ft_putstr(ft_strstr(dest3, src3));
+	ft_putchar('\n');
+	ft_putstr("Test du strstr: ");
+	ft_putstr(strstr(dest3, src3));
 	return 0;
 }
