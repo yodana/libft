@@ -35,4 +35,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char    *ft_strstr(const char *haystack, const char *needle);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
+int     ft_strcmp(const char *s1, const char *s2);
+int     ft_atoi(const char *nptr);
+int     ft_toupper(int c);
+void    *ft_memalloc(size_t size);
+
 #endif
