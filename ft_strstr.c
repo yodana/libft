@@ -11,13 +11,12 @@ char    *ft_strstr(const char *haystack, const char *needle)
         return ((char *)haystack);
     while (haystack[i])
     {
-        while (haystack[i] == needle[j])
+        while (haystack[i + j] == needle[j])
         {
-            i++;
             j++;
             if (needle[j] == '\0')
-                return ((char*)haystack + i - j);
-            if (!(haystack[i]))
+                return ((char*)haystack + i);
+            if (!(haystack[i + j]))
                 return (NULL);
         }
         j = 0;
