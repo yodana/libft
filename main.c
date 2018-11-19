@@ -71,5 +71,9 @@ int main()
 	ft_strdel(src5);
 	ft_putstr(src5);
 	ft_putchar('\n');
+	ft_putstr("Test 2 du memcmp:  ");
+	ft_putnbr(memcmp(NULL,NULL,0));
+	ft_putstr("  Test 2 du ft_memcmp : ");
+	ft_putnbr(ft_memcmp(NULL,NULL,0));
 	return 0;
 }
