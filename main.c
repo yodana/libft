@@ -27,8 +27,8 @@ int main()
 		ft_putchar('\n');
 		i++;
 	}
-	char dest[7] = "al";
-	char src[6] = "av";
+	char dest[7] = "salutii";
+	char src[6] = "bonou";
 	char dest2[7] = "salutii";
 	char src2[6] = "bonou";
 	i = 0;
@@ -42,10 +42,13 @@ int main()
 		ft_putchar(dest2[i]);
 		i++;
 	}
+	ft_putchar('\n');
 	char dest3[7] = "loilol";
 	char src3[4] = "lol";
+	ft_putstr("Test 0 du memcmp:  ");
 	ft_putnbr(memcmp(dest,src,3));
 	ft_putchar('\n');
+	ft_putstr("Test 0 du ft_memcmp");
 	ft_putnbr(ft_memcmp(dest,src,3));
 	ft_putchar('\n');
 	ft_putstr("Test du ft_strstr: ");
@@ -66,6 +69,12 @@ int main()
 	ft_putchar('\n');
 	ft_putstr("Test du toupper:   ");
 	ft_putchar(toupper(65));
+	ft_putchar('\n');
+	ft_putstr("Test du ft_memcmp :   ");
+	ft_putnbr(ft_memcmp(NULL,NULL,0));
+	ft_putchar('\n');
+	ft_putstr("Test du memcmp :    ");
+	ft_putnbr(memcmp(NULL, NULL, 0));
 	ft_putchar('\n');
 	return 0;
 }
