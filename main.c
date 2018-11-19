@@ -67,5 +67,9 @@ int main()
 	ft_putstr("Test du toupper:   ");
 	ft_putchar(toupper(65));
 	ft_putchar('\n');
+	char src5 = "bonjour";
+	ft_strdel(src5);
+	ft_putstr(src5);
+	ft_putchar('\n');
 	return 0;
 }

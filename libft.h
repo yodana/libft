@@ -40,5 +40,8 @@ int     ft_strcmp(const char *s1, const char *s2);
 int     ft_atoi(const char *nptr);
 int     ft_toupper(int c);
 void    *ft_memalloc(size_t size);
+void    ft_strclr(char *s);
+void    ft_memdel(void **as);
+void    ft_strdel(char **as);
 
 #endif
