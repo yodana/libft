@@ -5,6 +5,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+char * ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char * ft_strmap(char const *s, char (*f)(char));
+void ft_striter(char *s, void (*f)(char *));
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
