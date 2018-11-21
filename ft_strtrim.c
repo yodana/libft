@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 17:30:41 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/21 14:19:06 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/21 17:43:52 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/21 18:03:54 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strtrim(char const *s)
 {
-	size_t i;
-
+	int i;
+	int save1;
+	char *new;
+	
+	if (!(new = (char*)malloc(sizeof(char)
+	save1 = 0;
 	i = 0;
-	while (i < n)
-	{
-		if (((unsigned char*)s)[i] == (unsigned char)c)
-			return ((void*)s + i);
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	}
-	return (NULL);
-}
+
+

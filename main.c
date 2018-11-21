@@ -76,5 +76,11 @@ int main()
 	ft_putstr("Test du memcmp :    ");
 	ft_putnbr(memcmp(NULL, NULL, 0));
 	ft_putchar('\n');
+	char src7[] = "bonjour";
+	unsigned n = 3;
+	printf("%s",ft_strsub(src7, n, 2));
+	char *c = "bonjour";
+	char *s = "les amis";
+	printf("%s",ft_strjoin(c,s));
 	return 0;
 }

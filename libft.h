@@ -5,9 +5,11 @@
 #include <string.h>
 #include <stdlib.h>
 
-char * ft_strmapi(char const *s, char(*f)(unsigned int, char));
-char * ft_strmap(char const *s, char (*f)(char));
-void ft_striter(char *s, void (*f)(char *));
+char *ft_strsub(char const *s, unsigned int start, size_t len);
+int		ft_strequ(char const *s1, char const *s2);
+char	*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char	*ft_strmap(char const *s, char (*f)(char));
+void	ft_striter(char *s, void (*f)(char *));
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -46,5 +48,6 @@ void    *ft_memalloc(size_t size);
 void    ft_strclr(char *s);
 void    ft_memdel(void **as);
 void    ft_strdel(char **as);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
