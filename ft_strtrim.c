@@ -14,14 +14,23 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int i;
-	int save1;
+	int start;
 	char *new;
+	size_t len;
+
+	if (s == NULL)
+		return (NULL);
+	start = 0;
+	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t' || s[start]))
+		start++;
+	len = ft_strlen(s);
+	while (s[len] == ' ' || s[len] == '\n' || s[len] == '\t')
+		len--;
+	if ((!(new = (char*)malloc(sizeof(char) * len + 1))))
+		return (NULL);
+	return(ft_strsub(new, start, len));
+}
 	
-	if (!(new = (char*)malloc(sizeof(char)
-	save1 = 0;
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
+
 
 
