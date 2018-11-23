@@ -50,5 +50,5 @@ void    ft_memdel(void **as);
 void    ft_strdel(char **as);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
-
+char	**ft_strsplit(char const *s, char c);
 #endif

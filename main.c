@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
 int main()
 {
 	ft_putstr("Test 0 du ft_putnbr : ");
@@ -90,5 +91,6 @@ int main()
 	char const *t = "                          lol ";
 	ft_putstr(ft_strtrim(t));
 	ft_putchar('\n');
+	ft_strsplit("*salut*les***etudiants*", '*');
 	return 0;
 }

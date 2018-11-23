@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:18:45 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/20 18:45:31 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/23 16:41:56 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,5 +29,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
-
-
