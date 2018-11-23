@@ -76,11 +76,19 @@ int main()
 	ft_putstr("Test du memcmp :    ");
 	ft_putnbr(memcmp(NULL, NULL, 0));
 	ft_putchar('\n');
-	char src7[] = "bonjour";
-	unsigned n = 3;
-	printf("%s",ft_strsub(src7, n, 2));
+	char src7[] = "  lol  ";
+	unsigned n = 5;
+	ft_putstr("Test du ft_strsub :   ");
+	ft_putstr(ft_strsub(src7, 2, 3));
+	ft_putchar('\n');
+	ft_putstr("Test du ft_strjoin : ");
 	char *c = "bonjour";
 	char *s = "les amis";
-	printf("%s",ft_strjoin(c,s));
+	ft_putstr(ft_strjoin(c,s));
+	ft_putchar('\n');
+	ft_putstr("Test du ft_strtrim :   ");
+	char const *t = "                          lol ";
+	ft_putstr(ft_strtrim(t));
+	ft_putchar('\n');
 	return 0;
 }

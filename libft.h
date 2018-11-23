@@ -49,5 +49,6 @@ void    ft_strclr(char *s);
 void    ft_memdel(void **as);
 void    ft_strdel(char **as);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
 
 #endif

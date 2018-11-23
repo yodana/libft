@@ -6,12 +6,12 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 17:43:52 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/21 18:03:54 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/23 11:40:53 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 char	*ft_strtrim(char const *s)
 {
 	int start;
@@ -21,16 +21,15 @@ char	*ft_strtrim(char const *s)
 	if (s == NULL)
 		return (NULL);
 	start = 0;
-	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t' || s[start]))
+	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t') && s[start])
 		start++;
 	len = ft_strlen(s);
-	while (s[len] == ' ' || s[len] == '\n' || s[len] == '\t')
+	while ((s[len] == ' ' || s[len] == '\t' || s[len] == '\n' || s[len] == '\0') && len > 0)
 		len--;
-	if ((!(new = (char*)malloc(sizeof(char) * len + 1))))
+	len++;
+	if ((!(new = (char*)malloc(sizeof(char) * (len - start) + 1))))
 		return (NULL);
-	return(ft_strsub(new, start, len));
+	new = ft_strsub(s, start, len - start);
+	new[len] = '\0';
+	return (new);
 }
-	
-
-
-

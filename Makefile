@@ -23,7 +23,8 @@ bin:
 	mkdir bin
 
 $(NAME):  $(OBJ)
-	ar r $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@printf "LIBFT DONE SUCESS"
 
 $(BIN_FOLDER)%.o :%.c
 	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra -Werror
