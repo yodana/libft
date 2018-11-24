@@ -92,8 +92,8 @@ int main()
 	ft_putstr(ft_strtrim(t));
 	ft_putchar('\n');
 	ft_strsplit("*salut*les***etudiants*", '*');
-	int nbr = 10;
-	ft_putstr(ft_itoa(10));
+	int nbr = -10;
+	ft_putstr(ft_itoa(100));
 	ft_putchar('\n');
 	return 0;
 }

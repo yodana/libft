@@ -28,7 +28,7 @@ $(NAME):  $(OBJ)
 	@printf "LIBFT DONE SUCESS"
 
 $(BIN_FOLDER)%.o :%.c
-	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra 
+	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra -Werror 
 	@printf "$< done \r"
 	 
 clean: 
@@ -38,3 +38,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re 

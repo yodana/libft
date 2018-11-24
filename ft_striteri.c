@@ -6,11 +6,11 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:07:20 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/20 18:10:37 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/24 16:24:53 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int,char *))
 {
