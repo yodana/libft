@@ -3,5 +3,5 @@
 void    ft_strclr(char *s)
 {
 	if (s)
-		bzero((void*)s, ft_strlen((const char*)s));
+		ft_bzero((void*)s, ft_strlen((const char*)s));
 }
