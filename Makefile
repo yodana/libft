@@ -10,7 +10,7 @@ SRC = ft_bzero.c ft_putstr.c ft_putchar.c ft_putendl.c ft_putnbr.c ft_strnew.c \
 	ft_strclr.c ft_memcpy.c ft_memccpy.c ft_isascii.c ft_isprint.c \
 	ft_strdel.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
 	ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c \
-	ft_strsplit.c
+	ft_strsplit.c ft_itoa.c
 
 HEADER = libft.h
 
@@ -28,7 +28,7 @@ $(NAME):  $(OBJ)
 	@printf "LIBFT DONE SUCESS"
 
 $(BIN_FOLDER)%.o :%.c
-	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra -Werror
+	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra 
 	@printf "$< done \r"
 	 
 clean: 

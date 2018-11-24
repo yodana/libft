@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static int		ft_mot(char const *s, char c)
+static int  ft_mot(char const *s, char c)
 {
 	int i;
 	int words;

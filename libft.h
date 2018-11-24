@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+char *ft_itoa(int c);
 char *ft_strsub(char const *s, unsigned int start, size_t len);
 int		ft_strequ(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char(*f)(unsigned int, char));
