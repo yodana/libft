@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/26 12:50:21 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/26 12:51:37 by yodana           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int  ft_mot(char const *s, char c)
+static int	ft_mot(char const *s, char c)
 {
 	int i;
 	int words;
@@ -19,12 +31,12 @@ static int  ft_mot(char const *s, char c)
 	return (words);
 }
 
-char **ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	char **new;
-	int i;
-	int j;
-	int k;
+	char	**new;
+	int		i;
+	int		j;
+	int		k;
 
 	k = 0;
 	i = 0;
@@ -35,7 +47,7 @@ char **ft_strsplit(char const *s, char c)
 	{
 		while (s[j] == c && s[j])
 			j++;
-		if(!(new[i] = (char*)malloc(sizeof(char) * j + 1)))
+		if (!(new[i] = (char*)malloc(sizeof(char) * j + 1)))
 			return (NULL);
 		while (s[j] != c && s[j])
 			new[i][k++] = (char)s[j++];

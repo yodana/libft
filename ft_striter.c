@@ -6,13 +6,13 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:02:33 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/21 16:26:32 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/26 12:24:40 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 

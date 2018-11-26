@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/26 11:59:40 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/26 12:09:54 by yodana           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static	char	*ft_create(int size, int n,int neg)
+static char	*ft_create(int size, int n, int neg)
 {
 	char *new;
 
@@ -18,14 +30,15 @@ static	char	*ft_create(int size, int n,int neg)
 	}
 	return (new);
 }
-char    *ft_itoa(int n)
+
+char		*ft_itoa(int n)
 {
-    int i;
-    int size;
+	int i;
+	int size;
 	int neg;
 
 	neg = 0;
-    size = 0;
+	size = 0;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
@@ -37,10 +50,10 @@ char    *ft_itoa(int n)
 		size++;
 	}
 	i = n;
-    while (i > 0)
+	while (i > 0)
 	{
 		i = i / 10;
 		size++;
 	}
-	return (ft_create(size, n,neg));
+	return (ft_create(size, n, neg));
 }
