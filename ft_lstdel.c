@@ -6,13 +6,13 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 17:51:12 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/24 18:00:21 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/26 14:59:02 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdel(t_list **alst, void (*del)(void *,size_t))
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	while (*alst)
 	{
@@ -21,4 +21,3 @@ void ft_lstdel(t_list **alst, void (*del)(void *,size_t))
 		*alst = (*alst)->next;
 	}
 }
-

@@ -6,11 +6,9 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 13:45:58 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/19 12:42:06 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/26 15:32:56 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {
