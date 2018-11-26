@@ -95,5 +95,12 @@ int main()
 	int nbr = -10;
 	ft_putstr(ft_itoa(100));
 	ft_putchar('\n');
+	ft_putnbr(ft_abs(-8));
+	ft_putchar('\n');
+	ft_putnbr(ft_isspace(' '));
+	ft_putchar('\n');
+	ft_putnbr(isspace(' '));
+	ft_putchar('\n');
+	printf("%s",ft_strrev("s"));
 	return 0;
 }

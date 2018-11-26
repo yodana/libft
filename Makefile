@@ -11,32 +11,41 @@ SRC = ft_bzero.c ft_putstr.c ft_putchar.c ft_putendl.c ft_putnbr.c ft_strnew.c \
 	ft_strdel.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
 	ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c \
 	ft_strsplit.c ft_itoa.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
-	ft_lstadd.c ft_lstiter.c ft_lstmap.c
+	ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_abs.c ft_isspace.c \
+	ft_strrev.c
 
 HEADER = libft.h
 
 BIN_FOLDER = ./bin/
+
+YELLOW = \033[0;33m
+
+GREEN = \033[0;32m
+
+END_COLOR = \033[0m
 
 OBJ = $(addprefix $(BIN_FOLDER),$(SRC:.c=.o))
 
 all: bin $(NAME)
 
 bin:
-	mkdir bin
+	@mkdir bin
 
 $(NAME):  $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@printf "LIBFT DONE SUCESS"
+	@printf "$(GREEN) LIBFT DONE SUCESS! $(END_COLOR)"
 
 $(BIN_FOLDER)%.o :%.c
 	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra -Werror 
-	@printf "$< done \r"
-	 
+	@printf "$(YELLOW) Compiling:$(END_COLOR) $<  $(GREEN)[OK] $(END_COLOR)\r"
+
 clean: 
-	rm -rf $(BIN_FOLDER)
+	@rm -rf $(BIN_FOLDER)
+	@printf "$(GREEN) Clean done $(END_COLOR)\n"
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
+	@printf "$(GREEN) Fclean done $(END_COLOR)\n"
 
 re: fclean all
 

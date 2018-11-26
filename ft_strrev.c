@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit2.c                                      :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/15 15:42:22 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 16:49:20 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/26 17:02:24 by yodana            #+#    #+#             */
+/*   Updated: 2018/11/26 17:16:12 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+#include "libft.h"
+
+char	*ft_strrev(char *str)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	char	*new;
+	int		i;
+	int		j;
+
+	if (str == NULL)
+		return (NULL);
+	i = ft_strlen(str) - 1;
+	j = 0;
+	if (!(new = (char*)malloc(sizeof(char) * ft_strlen(str) + 1)))
+		return (NULL);
+	while (i >= 0)
+	{
+		new[j] = str[i];
+		j++;
+		i--;
+	}
+	return (new);
 }

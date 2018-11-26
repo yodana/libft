@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 11:50:44 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 11:55:40 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/26 16:55:09 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *nptr)
 {
-	unsigned int	res;
-	int				i;
-	int				sign;
+	unsigned int		res;
+	int					i;
+	int					sign;
 
 	sign = 1;
 	i = 0;
