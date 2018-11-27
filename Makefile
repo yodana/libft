@@ -37,7 +37,7 @@ $(NAME):  $(OBJ)
 
 $(BIN_FOLDER)%.o :%.c
 	@gcc $< -c -I $(HEADER) -o $@ -Wall -Wextra -Werror 
-	@printf "$(YELLOW) Compiling:$(END_COLOR) $<  $(GREEN)[OK] $(END_COLOR)\r"
+	@printf "$(YELLOW) Compiling:$(END_COLOR) $<  $(GREEN)[OK] $(END_COLOR)               \r"
 
 clean: 
 	@rm -rf $(BIN_FOLDER)
@@ -49,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 11:50:44 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 16:55:09 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/27 20:00:11 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int		ft_atoi(const char *nptr)
 	sign = 1;
 	i = 0;
 	res = 0;
-	while ((nptr[i] <= 32 || nptr[i] == '+') && nptr[i] != '\e')
+	while (nptr[i] <= 32 && nptr[i] >= 0 && nptr[i] != '\e')
 		i++;
-	if (nptr[i] == '-')
+	if (nptr[i] == '+')
+		i++;
+	if (nptr[i] == '-' && nptr[i - 1] != '+')
 	{
 		sign = -1;
 		i++;
@@ -34,9 +36,5 @@ int		ft_atoi(const char *nptr)
 		res = res + (nptr[i] - '0');
 		i++;
 	}
-	if (res > 2147483647 && sign == 1)
-		return (-1);
-	else if (res > 2147483648 && sign == -1)
-		return (0);
 	return ((int)res * sign);
 }

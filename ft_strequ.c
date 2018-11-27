@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 12:25:35 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 12:26:05 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/27 19:56:43 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_strequ(char const *s1, char const *s2)
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (0);
-	while (s1[i] && s2[i])
+	while (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])
 			return (0);

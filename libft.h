@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:02:10 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 17:06:26 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/27 19:57:40 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char			*ft_strnew(size_t size);
 size_t			ft_strlen(const char *s);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
-int				ft_isalphnum(int c);
+int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
 void			*ft_memset(void *s, int c, size_t n);
@@ -53,6 +53,8 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);
+char			*ft_strnstr(const char *haystack, const char *needle
+				, size_t len);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_atoi(const char *nptr);
@@ -64,6 +66,10 @@ void			ft_strdel(char **as);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+void			*ft_memmove(void *dst, const void *src, size_t len);
+int				ft_tolower(int c);
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+int				ft_strnequ(char const *s1, char const *s2, size_t n);
 
 typedef struct	s_list
 {
@@ -80,5 +86,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				ft_abs(int nbr);
 int				ft_isspace(int c);
 char			*ft_strrev(char *str);
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void			ft_lstadd(t_list **alst, t_list *n);
 
 #endif

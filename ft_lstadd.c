@@ -6,15 +6,14 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 18:00:29 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 15:20:58 by yodana           ###   ########.fr       */
+/*   Updated: 2018/11/27 19:18:09 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *n)
 {
-	while (*alst)
-		*alst = (*alst)->next;
-	*alst = new;
+	n->next = *alst;
+	*alst = n;
 }
