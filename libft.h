@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:02:10 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/27 19:57:40 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/04 16:19:46 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+
+# define END_COLOR "\033[0m"
+# define YELLOW "\033[0;33m"
+# define GREEN "\033[0;32m"
+# define RED "\033[0;31m"
 
 char			*ft_itoa(int c);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
@@ -88,5 +93,10 @@ int				ft_isspace(int c);
 char			*ft_strrev(char *str);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void			ft_lstadd(t_list **alst, t_list *n);
-
+int				ft_isspace(int c);
+int				ft_lstcount(t_list *lst);
+void			ft_printlst(t_list *lst);
+int				ft_isblank(int c);
+int				ft_abs(int c);
+void			ft_printcolor(char *str, char *color);
 #endif

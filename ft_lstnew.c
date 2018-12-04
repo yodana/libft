@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 17:18:04 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 15:00:23 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/04 15:45:25 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 
 	if (!(new = malloc(sizeof(t_list))))
 		return (NULL);
+	new->next = NULL;
 	if (content == NULL)
 	{
 		new->content = NULL;

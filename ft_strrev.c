@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:02:24 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 17:16:12 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/04 16:26:17 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char	*ft_strrev(char *str)
 	j = 0;
 	if (!(new = (char*)malloc(sizeof(char) * ft_strlen(str) + 1)))
 		return (NULL);
+	new[ft_strlen(str)] = '\0';
 	while (i >= 0)
 	{
 		new[j] = str[i];

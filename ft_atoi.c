@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 11:50:44 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/27 20:00:11 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/04 16:35:26 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int		ft_atoi(const char *nptr)
 	sign = 1;
 	i = 0;
 	res = 0;
-	while (nptr[i] <= 32 && nptr[i] >= 0 && nptr[i] != '\e')
+	while (nptr[i] == 32 || nptr[i] == '\f' || nptr[i] == '\t'
+			|| nptr[i] == '\n' || nptr[i] == '\r' || nptr[i] == '\v'
+				|| nptr[i] == '\a')
 		i++;
 	if (nptr[i] == '+')
 		i++;
