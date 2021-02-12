@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_conv_spe.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/21 15:38:42 by yodana            #+#    #+#             */
-/*   Updated: 2019/03/28 22:40:31 by yodana           ###   ########.fr       */
+/*   Created: 2019/05/28 02:14:27 by yodana            #+#    #+#             */
+/*   Updated: 2019/05/28 02:57:31 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int		ft_conv_spe(t_conv *lst_fct, va_list args, int flags)
 {
-	char	*new;
+	char	*res;
 	int		size;
-	int		j;
-	int		i;
 
-	i = 0;
-	j = 0;
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	if (!(new = (char*)malloc(sizeof(char) * size)))
-		return (NULL);
-	while (s1[i])
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		new[i] = s2[j];
-		i++;
-		j++;
-	}
-	new[i] = '\0';
-	return (new);
+	(void)args;
+	(void)flags;
+	res = ft_strnew(1);
+	res[0] = '%';
+	if (!(lst_fct->final = ft_strdup(res)))
+		return (1);
+	lst_fct->final = ft_space(1, lst_fct, ft_strlen(lst_fct->final));
+	ft_putstr(lst_fct->final);
+	size = ft_strlen(lst_fct->final);
+	ft_strdel(&res);
+	ft_strdel(&lst_fct->final);
+	return (size);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 11:59:40 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/26 16:42:50 by yodana           ###   ########.fr       */
+/*   Created: 2019/06/11 18:17:20 by yodana            #+#    #+#             */
+/*   Updated: 2019/06/11 18:18:20 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_create(int size, long long n, int neg)
+static char	*ft_create_u(int size, unsigned long long n, int neg)
 {
 	char *new;
 
@@ -31,29 +31,21 @@ static char	*ft_create(int size, long long n, int neg)
 	return (new);
 }
 
-char		*ft_itoa(long long n)
+char		*ft_itoa_u(long long n)
 {
-	long long	i;
-	int			size;
-	int			neg;
+	unsigned long long	i;
+	int					size;
+	int					neg;
 
 	neg = 0;
 	size = 0;
-	if (n == -9223372036854775807 - 1)
-		return (ft_strdup("-9223372036854775808"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	if (n < 0)
-	{
-		n = n * -1;
-		neg = 1;
-		size++;
-	}
 	i = n;
 	while (i > 0)
 	{
 		i = i / 10;
 		size++;
 	}
-	return (ft_create(size, n, neg));
+	return (ft_create_u(size, n, neg));
 }

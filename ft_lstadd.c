@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 18:00:29 by yodana            #+#    #+#             */
-/*   Updated: 2018/12/04 15:47:28 by yodana           ###   ########.fr       */
+/*   Updated: 2019/03/22 02:40:54 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *n)
 {
-	n->next = *alst;
-	*alst = n;
+	if (alst && n)
+	{
+		n->next = *alst;
+		*alst = n;
+	}
 }

@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_dtoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 17:18:04 by yodana            #+#    #+#             */
-/*   Updated: 2019/02/18 15:06:00 by yodana           ###   ########.fr       */
+/*   Created: 2019/05/27 18:58:05 by yodana            #+#    #+#             */
+/*   Updated: 2019/05/27 18:58:07 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+char	*ft_dtoa(long double m, int size)
 {
-	t_list *new;
+	int		i;
+	char	*res;
+	int		j;
 
-	if (!(new = malloc(sizeof(t_list))))
+	i = 0;
+	j = 0;
+	if (!(res = ft_strnew(size)))
 		return (NULL);
-	new->next = NULL;
-	if (content == NULL)
+	j = (int)m;
+	while (i != size)
 	{
-		new->content = NULL;
-		new->content_size = 0;
-		return (new);
+		if (i == 1)
+		{
+			res[i] = '.';
+			i++;
+		}
+		res[i] = j + '0';
+		m = m - j;
+		m = m * 10;
+		j = (int)m;
+		i++;
 	}
-	if (!(new->content = malloc(sizeof(content) * content_size)))
-		return (NULL);
-	ft_memcpy(new->content, content, content_size);
-	new->content_size = content_size;
-	return (new);
+	return (res);
 }

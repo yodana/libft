@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   union.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:16:39 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/15 14:10:28 by yodana           ###   ########.fr       */
+/*   Created: 2019/05/28 05:39:51 by yodana            #+#    #+#             */
+/*   Updated: 2019/05/28 09:15:03 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef UNION_H
 
-void	ft_putnbr(long long n)
+# define UNION_H
+
+typedef union				u_float
 {
-	if (n < 0)
+	long double				f;
+	struct
 	{
-		ft_putchar('-');
-		n = n * -1;
-	}
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
-}
+		unsigned long long	m:64;
+		unsigned int		e:15;
+		unsigned int		sign:1;
+		unsigned int		empty:16;
+	}						parts;
+}							t_float;
+#endif

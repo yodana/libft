@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:02:10 by yodana            #+#    #+#             */
-/*   Updated: 2018/12/04 16:19:46 by yodana           ###   ########.fr       */
+/*   Updated: 2019/06/11 02:19:38 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include "printf.h"
+# define END_COLOR	"\033[0m"
+# define YELLOW		"\033[0;33m"
+# define GREEN		"\033[0;32m"
+# define RED		"\033[0;31m"
+# define BUFF_SIZE	32
 
-# define END_COLOR "\033[0m"
-# define YELLOW "\033[0;33m"
-# define GREEN "\033[0;32m"
-# define RED "\033[0;31m"
-
-char			*ft_itoa(int c);
+int				ft_sqrt(int nbr);
+char			*ft_strjoin_fr(char *s1, char *s2, int i);
+char			*ft_itoa(long long c);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 int				ft_strequ(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char(*f)(unsigned int, char));
@@ -32,7 +35,7 @@ void			ft_bzero(void *s, size_t n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);
 void			ft_putendl(char const *s);
-void			ft_putnbr(int n);
+void			ft_putnbr(long long n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
@@ -58,8 +61,8 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);
-char			*ft_strnstr(const char *haystack, const char *needle
-				, size_t len);
+char			*ft_strnstr(const char *haystack, const char *needle,
+		size_t len);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_atoi(const char *nptr);
@@ -86,11 +89,10 @@ typedef struct	s_list
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				ft_abs(int nbr);
 int				ft_isspace(int c);
-char			*ft_strrev(char *str);
+char			*ft_strrev_fr(char *str);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void			ft_lstadd(t_list **alst, t_list *n);
 int				ft_isspace(int c);
@@ -99,4 +101,11 @@ void			ft_printlst(t_list *lst);
 int				ft_isblank(int c);
 int				ft_abs(int c);
 void			ft_printcolor(char *str, char *color);
+int				get_next_line(const int fd, char **line);
+void			ft_strrdel(char **arr);
+double			ft_power(double nbr, double power);
+char			*ft_strsub_fr(char const *s, unsigned int start, size_t len);
+char			*ft_itoa_u(long long nbr);
+char			*ft_get_txt(int fd);
+
 #endif

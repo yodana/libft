@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 17:18:04 by yodana            #+#    #+#             */
-/*   Updated: 2019/02/18 15:06:00 by yodana           ###   ########.fr       */
+/*   Created: 2018/11/26 17:02:24 by yodana            #+#    #+#             */
+/*   Updated: 2019/03/27 21:49:35 by arbocqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+char	*ft_strrev_fr(char *str)
 {
-	t_list *new;
+	char	*new;
+	int		i;
+	int		j;
 
-	if (!(new = malloc(sizeof(t_list))))
+	if (str == NULL)
 		return (NULL);
-	new->next = NULL;
-	if (content == NULL)
+	i = ft_strlen(str) - 1;
+	j = 0;
+	if (!(new = (char*)malloc(sizeof(char) * (ft_strlen(str) + 1))))
+		return (NULL);
+	new[ft_strlen(str)] = '\0';
+	while (i >= 0)
 	{
-		new->content = NULL;
-		new->content_size = 0;
-		return (new);
+		new[j] = str[i];
+		j++;
+		i--;
 	}
-	if (!(new->content = malloc(sizeof(content) * content_size)))
-		return (NULL);
-	ft_memcpy(new->content, content, content_size);
-	new->content_size = content_size;
+	ft_strdel(&str);
 	return (new);
 }

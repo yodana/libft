@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 17:18:04 by yodana            #+#    #+#             */
-/*   Updated: 2019/02/18 15:06:00 by yodana           ###   ########.fr       */
+/*   Created: 2019/06/11 01:22:13 by yodana            #+#    #+#             */
+/*   Updated: 2019/06/11 01:22:22 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+double		ft_power(double nbr, double power)
 {
-	t_list *new;
+	int		i;
+	double	res;
 
-	if (!(new = malloc(sizeof(t_list))))
-		return (NULL);
-	new->next = NULL;
-	if (content == NULL)
+	res = 1;
+	i = 1;
+	while (i <= power)
 	{
-		new->content = NULL;
-		new->content_size = 0;
-		return (new);
+		res = res * nbr;
+		i++;
 	}
-	if (!(new->content = malloc(sizeof(content) * content_size)))
-		return (NULL);
-	ft_memcpy(new->content, content, content_size);
-	new->content_size = content_size;
-	return (new);
+	return (res);
 }

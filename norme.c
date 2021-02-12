@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_fill_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 17:18:04 by yodana            #+#    #+#             */
-/*   Updated: 2019/02/18 15:06:00 by yodana           ###   ########.fr       */
+/*   Created: 2019/05/28 02:06:09 by yodana            #+#    #+#             */
+/*   Updated: 2019/05/28 02:07:12 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+int		ft_check_u(char c)
 {
-	t_list *new;
+	if (c == 'u' || c == 'o' || c == 'x' || c == 'X')
+		return (-1);
+	return (1);
+}
 
-	if (!(new = malloc(sizeof(t_list))))
+char	*ft_fill_attribut(void)
+{
+	char *tab;
+
+	if (!(tab = ft_strnew(6)))
 		return (NULL);
-	new->next = NULL;
-	if (content == NULL)
-	{
-		new->content = NULL;
-		new->content_size = 0;
-		return (new);
-	}
-	if (!(new->content = malloc(sizeof(content) * content_size)))
-		return (NULL);
-	ft_memcpy(new->content, content, content_size);
-	new->content_size = content_size;
-	return (new);
+	tab[0] = '#';
+	tab[1] = '0';
+	tab[2] = '-';
+	tab[3] = '+';
+	tab[4] = ' ';
+	tab[5] = '\0';
+	return (tab);
 }
